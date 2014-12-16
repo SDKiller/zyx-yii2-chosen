@@ -14,8 +14,21 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "npm-asset/chosen": "1.2.0"
+        "harvesthq/chosen": "*"
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "harvesthq/chosen",
+                "version": "1.2.0",
+                "dist": {
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.2.0/chosen_v1.2.0.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
     "autoload": {
         "psr-4": {
             "zyx\\chosen\\": ""
