@@ -12,10 +12,6 @@
             "homepage": "https://github.com/RomeroMsk"
         }
     ],
-    "require": {
-        "yiisoft/yii2": "*",
-        "harvesthq/chosen": "1.2.0"
-    },
     "repositories": [
         {
             "type": "package",
@@ -29,6 +25,10 @@
             }
         }
     ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "harvesthq/chosen": "1.2.*"
+    },
     "autoload": {
         "psr-4": {
             "zyx\\chosen\\": ""
