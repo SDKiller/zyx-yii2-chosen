@@ -14,12 +14,12 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/harvesthq-chosen": "1.2.0"
+        "bower-asset/chosen": "1.2.0"
     },
     "extra": {
         "asset-repositories": [
             {
-                "name": "bower-asset/harvesthq-chosen",
+                "name": "bower-asset/chosen",
                 "type": "bower-vcs",
                 "url": "git://github.com/harvesthq/chosen.git"
             }
