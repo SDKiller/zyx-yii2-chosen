@@ -14,14 +14,14 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/chosen": "1.2.0"
+        "bower-asset/chosen": "*"
     },
     "extra": {
         "asset-repositories": [
             {
                 "name": "bower-asset/chosen",
                 "type": "bower-vcs",
-                "url": "git://github.com/harvesthq/chosen.git"
+                "url": "https://github.com/harvesthq/chosen/releases/download/v1.2.0/chosen_v1.2.0.zip"
             }
         ]
     },
