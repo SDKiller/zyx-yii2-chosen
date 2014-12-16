@@ -20,7 +20,7 @@
         "asset-repositories": [
             {
                 "name": "bower-asset/harvesthq-chosen",
-                "type": "vcs",
+                "type": "bower-vcs",
                 "url": "git://github.com/harvesthq/chosen.git"
             }
         ]
