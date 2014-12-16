@@ -14,16 +14,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/chosen": "*"
-    },
-    "extra": {
-        "asset-repositories": [
-            {
-                "name": "bower-asset/chosen",
-                "type": "bower-vcs",
-                "url": "https://github.com/harvesthq/chosen/releases/download/v1.2.0/chosen_v1.2.0.zip"
-            }
-        ]
+        "npm-asset/chosen": "1.2.0"
     },
     "autoload": {
         "psr-4": {
