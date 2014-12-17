@@ -3,7 +3,9 @@ Chosen + Bootstrap 3 + Yii2
 
 This is a fork of https://github.com/RomeroMsk/yii2-chosen made in attempt to keep up to date dependency of http://harvesthq.github.io/chosen/
 
-Important! Due to Composer restrictions it is nesessary to copy this to your root `composer.json` before installing (see https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md for details)
+Important! 
+----------
+Due to Composer restrictions it is nesessary to copy this "repositories" part to your root `composer.json` before installing (see https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md for details):
 
 ```
 "repositories": [
@@ -11,9 +13,9 @@ Important! Due to Composer restrictions it is nesessary to copy this to your roo
             "type": "package",
             "package": {
                 "name": "harvesthq/chosen",
-                "version": "1.2.0",
+                "version": "1.3.0",
                 "dist": {
-                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.2.0/chosen_v1.2.0.zip",
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip",
                     "type": "zip"
                 }
             }
