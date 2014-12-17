@@ -14,7 +14,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "harvesthq/chosen": "1.2.*"
+        "harvesthq/chosen": "*"
     },
     "autoload": {
         "psr-4": {
@@ -28,7 +28,7 @@
                 "name": "harvesthq/chosen",
                 "version": "1.2.0",
                 "dist": {
-                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.2.0/chosen_v1.2.0.zip",
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip",
                     "type": "zip"
                 }
             }
