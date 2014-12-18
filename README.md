@@ -5,7 +5,7 @@ This is a fork of https://github.com/RomeroMsk/yii2-chosen made in attempt to ke
 
 Important! 
 ----------
-Due to Composer restrictions it is nesessary to copy this "repositories" part to your root `composer.json` before installing (see https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md for details):
+Due to Composer restrictions it is nesessary to copy this "repositories" part to your root `composer.json` before installing extension (see https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md for details):
 
 ```
 "repositories": [
