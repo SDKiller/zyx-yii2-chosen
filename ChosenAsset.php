@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 2014 Roman Ovchinnikov
+ * @copyright Copyright (c) 2014 Roman Ovchinnikov, forked by Serge Postrash aka SDKiller <jexy.ru@gmail.com>
  * @link https://github.com/RomeroMsk
  * @version 1.0.0
  */
@@ -25,6 +25,5 @@ class ChosenAsset extends AssetBundle
 
     public $depends = [
         'yii\bootstrap\BootstrapAsset',
-        'zyx\chosen\ChosenJsAsset',
     ];
 }

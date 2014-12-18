@@ -1,10 +1,10 @@
 <?php
 /**
- * @copyright Copyright (c) 2014 Roman Ovchinnikov
+ * @copyright Copyright (c) 2014 Roman Ovchinnikov, forked by Serge Postrash aka SDKiller <jexy.ru@gmail.com>
  * @link https://github.com/RomeroMsk
  * @version 1.0.0
  */
-namespace nex\chosen;
+namespace zyx\chosen;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -85,6 +85,7 @@ class Chosen extends InputWidget
         $this->clientOptions['placeholder_text_multiple'] = \Yii::t($this->translateCategory, $this->placeholder ? $this->placeholder : 'Select some options');
         $this->clientOptions['no_results_text'] = \Yii::t('app', 'No results match');
         $this->options['unselect'] = null;
+        $this->registerCss();
         $this->registerScript();
         $this->registerEvents();
     }
@@ -101,12 +102,17 @@ class Chosen extends InputWidget
         }
     }
 
+    public function registerCss()
+    {
+        ChosenAsset::register($this->getView());
+    }
+
     /**
      * Registers chosen.js
      */
     public function registerScript()
     {
-        ChosenAsset::register($this->getView());
+        ChosenJsAsset::register($this->getView());
         $clientOptions = Json::encode($this->clientOptions);
         $id = $this->options['id'];
         $this->getView()->registerJs("jQuery('#$id').chosen({$clientOptions});");
