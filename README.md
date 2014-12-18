@@ -1,6 +1,3 @@
-Chosen + Bootstrap 3 + Yii2
-===========================
-
 This is a fork of https://github.com/RomeroMsk/yii2-chosen made in attempt to keep up to date dependency of http://harvesthq.github.io/chosen/
 
 Important! 
@@ -24,6 +21,10 @@ Due to Composer restrictions it is nesessary to copy this "repositories" part to
     ],
 ```
 
+
+
+Chosen + Bootstrap 3 + Yii2
+===========================
 
 Credits
 -------
