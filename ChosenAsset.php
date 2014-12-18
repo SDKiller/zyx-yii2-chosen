@@ -4,7 +4,7 @@
  * @link https://github.com/RomeroMsk
  * @version 1.0.0
  */
-namespace nex\chosen;
+namespace zyx\chosen;
 
 use yii\web\AssetBundle;
 
@@ -17,18 +17,14 @@ use yii\web\AssetBundle;
  */
 class ChosenAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/nex/yii2-chosen/assets';
+    public $sourcePath = '@vendor/zyx/yii2-chosen/assets';
 
     public $css = [
         'css/chosen.bootstrap.css'
     ];
 
-    public $js = [
-        'js/chosen.jquery.js'
-    ];
-
     public $depends = [
         'yii\bootstrap\BootstrapAsset',
-        'yii\web\JqueryAsset',
+        'zyx\chosen\ChosenJsAsset',
     ];
 }
