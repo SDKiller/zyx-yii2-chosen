@@ -6,30 +6,7 @@ UPD
 Since version 1.4.2 *Chosen* provides compiled sourses also in `bower` package and separate repo https://github.com/harvesthq/bower-chosen
 
 This fork is switching to `bower` sourses.
-
-
-Important!
-----------
-Compiled sourses for http://harvesthq.github.io/chosen/ are provided only in releases.
-Due to Composer restrictions it is nesessary to copy this "repositories" part to your root `composer.json` before installing extension
-(see https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md for details):
-
-```
-"repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "harvesthq/chosen",
-                "version": "1.3.0",
-                "dist": {
-                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    ],
-```
-
+------------------------------------------
 
 
 Chosen + Bootstrap 3 + Yii2
