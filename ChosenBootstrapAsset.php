@@ -2,8 +2,9 @@
 /**
  * @copyright Copyright (c) 2014 Roman Ovchinnikov, forked by Serge Postrash aka SDKiller <jexy.ru@gmail.com>
  * @link https://github.com/RomeroMsk
- * @version 1.0.0
+ * @version 1.1.0
  */
+
 namespace zyx\chosen;
 
 use yii\web\AssetBundle;
@@ -15,7 +16,7 @@ use yii\web\AssetBundle;
  * @link https://github.com/RomeroMsk/yii2-chosen
  * @see http://harvesthq.github.io/chosen
  */
-class ChosenAsset extends AssetBundle
+class ChosenBootstrapAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/zyx/yii2-chosen/assets';
 

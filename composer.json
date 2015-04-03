@@ -10,28 +10,20 @@
             "name": "Roman Ovchinnikov",
             "email": "nex.software@gmail.com",
             "homepage": "https://github.com/RomeroMsk"
+        },
+        {
+            "name": "Serge Postrash aka SDKiller",
+            "email": "jexy.ru@gmail.com",
+            "homepage": "https://github.com/SDKiller"
         }
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "harvesthq/chosen": "*"
+        "bower-asset/chosen": ">=1.4.2"
     },
     "autoload": {
         "psr-4": {
             "zyx\\chosen\\": ""
         }
-    },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "harvesthq/chosen",
-                "version": "1.3.0",
-                "dist": {
-                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    ]
+    }
 }

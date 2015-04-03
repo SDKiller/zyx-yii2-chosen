@@ -1,9 +1,17 @@
 This is a fork of https://github.com/RomeroMsk/yii2-chosen, made in attempt to keep up to date dependency of http://harvesthq.github.io/chosen/
 
-Important! 
+UPD
+===
+
+Since version 1.4.2 *Chosen* provides compiled sourses also in `bower` package and separate repo https://github.com/harvesthq/bower-chosen
+
+This fork is switching to `bower` sourses.
+
+
+Important!
 ----------
 Compiled sourses for http://harvesthq.github.io/chosen/ are provided only in releases.
-Due to Composer restrictions it is nesessary to copy this "repositories" part to your root `composer.json` before installing extension 
+Due to Composer restrictions it is nesessary to copy this "repositories" part to your root `composer.json` before installing extension
 (see https://getcomposer.org/doc/faqs/why-can%27t-composer-load-repositories-recursively.md for details):
 
 ```

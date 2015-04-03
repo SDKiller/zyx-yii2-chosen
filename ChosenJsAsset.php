@@ -14,26 +14,14 @@ use yii\web\AssetBundle;
 
 class ChosenJsAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/harvesthq/chosen';
+    public $sourcePath = '@bower/chosen';
 
     public $js = [
         'chosen.jquery.min.js'
     ];
 
     public $depends = [
-        'yii\web\YiiAsset',
+        'yii\web\JqueryAsset',
     ];
-
-    /**
-     * @inheritdoc
-     */
-    public function init()
-    {
-        parent::init();
-
-        if (YII_DEBUG) {
-            $this->js[0] = 'chosen.jquery.js';
-        }
-    }
 
 }

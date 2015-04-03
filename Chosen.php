@@ -2,8 +2,9 @@
 /**
  * @copyright Copyright (c) 2014 Roman Ovchinnikov, forked by Serge Postrash aka SDKiller <jexy.ru@gmail.com>
  * @link https://github.com/RomeroMsk
- * @version 1.0.0
+ * @version 1.1.0
  */
+
 namespace zyx\chosen;
 
 use Yii;
@@ -64,6 +65,7 @@ class Chosen extends InputWidget
      */
     public $clientEvents = [];
 
+
     /**
      * @inheritdoc
      */
@@ -73,7 +75,7 @@ class Chosen extends InputWidget
         if ($this->multiple) {
             $this->options['multiple'] = true;
         } elseif ($this->allowDeselect) {
-            $this->items = ArrayHelper::merge([null => ''], $this->items);
+            $this->items                                  = ArrayHelper::merge([null => ''], $this->items);
             $this->clientOptions['allow_single_deselect'] = true;
         }
         if ($this->disableSearch === true) {
@@ -81,10 +83,10 @@ class Chosen extends InputWidget
         } else {
             $this->clientOptions['disable_search_threshold'] = $this->disableSearch;
         }
-        $this->clientOptions['placeholder_text_single'] = \Yii::t($this->translateCategory, $this->placeholder ? $this->placeholder : 'Select an option');
+        $this->clientOptions['placeholder_text_single']   = \Yii::t($this->translateCategory, $this->placeholder ? $this->placeholder : 'Select an option');
         $this->clientOptions['placeholder_text_multiple'] = \Yii::t($this->translateCategory, $this->placeholder ? $this->placeholder : 'Select some options');
-        $this->clientOptions['no_results_text'] = \Yii::t('app', 'No results match');
-        $this->options['unselect'] = null;
+        $this->clientOptions['no_results_text']           = \Yii::t('app', 'No results match');
+        $this->options['unselect']                        = null;
         $this->registerCss();
         $this->registerScript();
         $this->registerEvents();
@@ -104,7 +106,7 @@ class Chosen extends InputWidget
 
     public function registerCss()
     {
-        ChosenAsset::register($this->getView());
+        ChosenBootstrapAsset::register($this->getView());
     }
 
     /**
