@@ -23,5 +23,4 @@ class ChosenJsAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
     ];
-
 }

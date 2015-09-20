@@ -15,13 +15,14 @@ use yii\web\AssetBundle;
  * @author Roman Ovchinnikov <nex.software@gmail.com>
  * @link https://github.com/RomeroMsk/yii2-chosen
  * @see http://harvesthq.github.io/chosen
+ * @see https://github.com/dbtek/chosen-bootstrap
  */
 class ChosenBootstrapAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/zyx/yii2-chosen/assets';
+    public $sourcePath = '@bower/chosen-bootstrap';
 
     public $css = [
-        'css/chosen.bootstrap.css'
+        'chosen.bootstrap.min.css'
     ];
 
     public $depends = [
