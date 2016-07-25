@@ -30,7 +30,7 @@ php composer.phar require "nex/yii2-chosen" "*"
 
 or add
 
-```json
+```
 "nex/yii2-chosen" : "*"
 ```
 

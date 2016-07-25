@@ -24,6 +24,10 @@ use yii\widgets\InputWidget;
 class Chosen extends InputWidget
 {
     /**
+     * @var boolean whether to render input with bootstrap-like css
+     */
+    public $bootstrap = true;
+    /**
      * @var boolean whether to render input as multiple select
      */
     public $multiple = false;
@@ -47,6 +51,10 @@ class Chosen extends InputWidget
      * @var string category for placeholder translation
      */
     public $translateCategory = 'app';
+    /**
+     * @var string no_results_text text
+     */
+    public $noResultsText = null;
 
     /**
      * @var array items array to render select options
@@ -85,8 +93,11 @@ class Chosen extends InputWidget
         }
         $this->clientOptions['placeholder_text_single']   = \Yii::t($this->translateCategory, $this->placeholder ? $this->placeholder : 'Select an option');
         $this->clientOptions['placeholder_text_multiple'] = \Yii::t($this->translateCategory, $this->placeholder ? $this->placeholder : 'Select some options');
-        $this->clientOptions['no_results_text']           = \Yii::t('app', 'No results match');
-        $this->options['unselect']                        = null;
+        $this->clientOptions['no_results_text']           = \Yii::t($this->translateCategory, $this->noResultsText ? $this->noResultsText : 'No results match');
+        if (!isset($this->options['unselect'])) {
+            // https://github.com/RomeroMsk/yii2-chosen/issues/11
+            $this->options['unselect'] = $this->multiple ? '' : null;
+        }
         $this->registerCss();
         $this->registerScript();
         $this->registerEvents();
@@ -104,9 +115,17 @@ class Chosen extends InputWidget
         }
     }
 
+    /**
+     * Registers either 'native' chosen.min.css or chosen.bootstrap.min.css (https://github.com/dbtek/chosen-bootstrap)
+     * depending on `bootstrap` option.
+     */
     public function registerCss()
     {
-        ChosenBootstrapAsset::register($this->getView());
+        if ($this->bootstrap === true) {
+            ChosenBootstrapAsset::register($this->getView());
+        } else {
+            ChosenCssAsset::register($this->getView());
+        }
     }
 
     /**
@@ -131,7 +150,7 @@ class Chosen extends InputWidget
                 $handle = new JsExpression($handle);
                 $js[] = "jQuery('#{$this->options['id']}').on('{$event}', {$handle});";
             }
-            $this->getView()->registerJs(implode(PHP_EOL, $js));
+            $this->getView()->registerJs(implode("\n", $js));
         }
     }
 }
